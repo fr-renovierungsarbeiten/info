@@ -14,6 +14,8 @@ env:
   VITE_REACT_APP_FIREBASE_APP_ID: ${{ secrets.APP_ID }}
   VITE_REACT_APP_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
   VITE_REACT_APP_CHAT_ID: ${{ secrets.CHAT_ID }}
+  VITE_REACT_APP_RECAPCHA: ${{ secrets.RECAPCHA }}
+  VITE_REACT_APP_ROUTE: ${{ secrets.ROUTE }}
 
 jobs:
   deploy:
