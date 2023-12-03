@@ -1,0 +1,139 @@
+@import "./styles/colors.css";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* font-family: "Nunito-Light"; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: var(--max-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.btnOk {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #2993d960;
+}
+
+.btnOk:hover {
+  background-color: var(--blue);
+  color: var(--seasalt);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.btnOk:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+.btnCancel {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #d21a1a82;
+}
+
+.btnCancel:hover {
+  background-color: var(--red);
+  color: var(--seasalt);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.btnCancel:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+div.swiper-button-prev, div.swiper-button-next{
+  height: 2vw;
+  transform: scale(var(--button-scale));
+}
+
+
+#uberUns {
+  scroll-margin-top: 9vh;
+}
+#leistungen {
+  scroll-margin-top: 9vh;
+}
+#projecte {
+  scroll-margin-top: 9vh;
+}
+#Contacts {
+  scroll-margin-top: 9vh;
+}

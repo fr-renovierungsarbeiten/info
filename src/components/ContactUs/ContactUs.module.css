@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Archivo+Black&display=swap");
+
+
+.contactsMain{
+  /* background-image: url("/bg32.jpg");
+  filter: opacity(80%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  width: 100%;
+  /* height: 100vh; */
+  margin: 0;
+
+background-image: linear-gradient(
+  0deg,
+  hsl(0deg 0% 35%) 0%,
+  hsl(0deg 0% 47%) 11%,
+  hsl(0deg 0% 56%) 22%,
+  hsl(0deg 0% 64%) 33%,
+  hsl(0deg 0% 72%) 44%,
+  hsl(0deg 0% 78%) 56%,
+  hsl(0deg 0% 84%) 67%,
+  hsl(0deg 0% 90%) 78%,
+  hsl(0deg 0% 95%) 89%,
+  hsl(0deg 0% 100%) 100%
+);
+}
+
+.contactsContainer{
+  width: 80%;
+  margin: 1vw auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBlock{
+  width: 50%;
+  /* text-align: start; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--darkBlue);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+.title{
+  text-align: center;
+  font-size: 2vw;
+  color: var(--main-text-color);
+  text-decoration: underline;
+  margin-bottom: 3vw;
+}
+
+.nameBlock{
+  margin-bottom: 2vw;
+}
+.nameText {
+  text-align: center;
+  font-size: 3.5vw;
+  margin-bottom: 1vw;
+}
+
+.spanText{
+  font-size: 1.8vw;
+}
+
+.addressText {
+  font-size: 1.8vw;
+}
+
+.mailBlock{
+  margin: 2vw 0;
+}
+.mail{
+  font-size: 1.8vw;
+}
+.mail:hover {
+  color: var(--darkBlue);
+  text-shadow: 2px 2px 2px rgba(121, 121, 121, 0.5);
+}
+
+.phonesBlock {
+  margin: 0;
+}
+.phone {
+  font-size: 1.8vw;
+  margin-right: 2vw;
+}
+.phone:hover {
+  color: var(--darkBlue);
+  text-shadow: 2px 2px 2px rgba(121, 121, 121, 0.5);
+}
+
+.iconLocation {
+  font-size: 1.5vw;
+  margin-right: 0.5vw;
+}
+.iconPhone {
+  font-size: 1.5vw;
+  margin-right: 0.3vw;
+}
+.iconMail {
+  font-size: 1.5vw;
+  margin-right: 0.5vw;
+}
+
+.rightBlock{
+  width: 40%;
+  padding: 1vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(30px);
+  
+  border-radius: 15px;
+}
+
+.contacts_form {
+  width: 100%;
+}
+
+.form_control{
+  margin-bottom: 1vw;
+  width: 100%;
+  padding: 0.5vw;
+  border-radius: 4px;
+  border: 1px solid rgb(194, 194, 194);
+  background-color: transparent;
+}
+
+.contacts_input_div {
+  margin-bottom: 1vw;
+  width: 100%;
+}
+
+.questionTextInput{
+  margin-bottom: 1vw;
+  width: 100%;
+  padding: 0.5vw;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.contacts_info {
+  color: var(--darkBlue);
+  font-size: 0.9vw;
+  margin: -1rem 0 1rem;
+  text-align: center;
+}
+
+.contacts_info_charLeft {
+  color: var(--darkBlue);
+  font-size: 0.8vw;
+  margin: -1vw 1vw 1vw;
+}
+
+.contacts_info_charLeft span {
+  font-weight: 900;
+}
+
+.askText {
+  font-family: "Actor", sans-serif;
+  font-size: 2vw;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.recapcha{
+  display: flex;
+  justify-content: center;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: center;
+}
+.requestButton {
+  padding: 0.6rem 1.4vw;
+  background-color: var(--blue);
+  margin-top: 1vw;
+  color: var(--white);
+  border-radius: 5px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  font-size: 1.3vw;
+  box-shadow: 1px 1px 4px rgba(223, 127, 127, 0.3);
+}
+.requestButton:hover {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.requestButtonOff {
+  padding: 0.6rem 1.4vw;
+  background-color: grey;
+  margin-top: 1vw;
+  color: var(--white);
+  border-radius: 5px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  font-size: 1.3vw;
+  box-shadow: 1px 1px 4px rgba(223, 127, 127, 0.3);
+}
+
+.map{
+  width: 100%;
+  height: 25vh;
+  margin: 0 0 -1vh;
+  border: none;
+  filter: grayscale(100%);
+  transition: filter 0.5s; 
+}
+.map:hover{
+  filter: grayscale(10%); 
+}

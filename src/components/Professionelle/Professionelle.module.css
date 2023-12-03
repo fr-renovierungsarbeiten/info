@@ -1,0 +1,173 @@
+.container{
+  width: 80%;
+  margin: auto;
+}
+.gradient{
+  background-image: linear-gradient(
+    0deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(200deg 90% 96%) 14%,
+    hsl(200deg 90% 91%) 29%,
+    hsl(199deg 90% 86%) 43%,
+    hsl(199deg 90% 86%) 57%,
+    hsl(200deg 90% 91%) 71%,
+    hsl(200deg 90% 96%) 86%,
+    hsl(0deg 0% 100%) 100%
+  );
+}
+
+.title{
+  text-align: center;
+  font-size: 2vw;
+  color: var(--blue);
+  text-decoration: underline;
+  margin-bottom: 2.5vw;
+}
+
+.punktText{
+  color: var(--darkBlue);
+  font-size: 1.7vw;
+  margin: 1.8vw 0.8vw;
+}
+.check{
+  color: var(--stastistics);
+  font-size: 2.1vw;
+  position: relative;
+  bottom: -0.5vw;
+}
+
+.Leistungen{
+  margin-top: 6vw;  
+}
+
+.leistungenContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 80%;
+  margin: 2vw auto;
+}
+.leistungenText{
+  color: var(--darkBlue);
+  font-size: 1.8vw;
+  margin: 1.8vw;
+}
+.iconDot{
+  font-size: 1vw;
+  color: var(--darkBlue);
+  margin-right: 1vw;
+}
+
+.gipsCard{
+  width: 60%;
+  border: 1px solid var(--darkBlue);
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3vw;
+}
+.gipsTop{
+  background-color: var(--blue);
+  border-radius: 20px 20px 0 0;
+}
+.gipsImg{
+  width: 5vw;
+  margin: 1vw;
+}
+.gipsTitle{
+  display: flex;
+  align-items: center;
+  color: var(--darkBlue);
+  font-size: 4vw;;
+}
+.gipsText{
+  font-size: 2vw;
+  padding: 2vw;
+  text-indent: 1vw;
+}
+
+.malerarbeitenCard{
+  margin-left: auto;
+  width: 80%;
+  border: 1px solid var(--darkBlue);
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3vw;
+}
+.malerarbeitenTop{
+  background-color: var(--blue);
+  border-radius: 20px 20px 0 0;
+}
+.malerarbeitenImg{
+  width: 7vw;
+  margin: 1vw;
+}
+.malerarbeitenTitle{
+  display: flex;
+  align-items: center;
+  color: var(--darkBlue);
+  font-size: 4vw;;
+}
+.malerarbeitenText{
+  font-size: 2vw;
+  padding: 2vw;
+  text-indent: 1vw;
+}
+
+.abrissarbeitenCard{
+  margin: auto;
+  width: 65%;
+  border: 1px solid var(--darkBlue);
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3vw;
+}
+.abrissarbeitenTop{
+  background-color: var(--blue);
+  border-radius: 20px 20px 0 0;
+}
+.abrissarbeitenImg{
+  width: 9vw;
+  margin: 0.5vw;
+}
+.abrissarbeitenTitle{
+  display: flex;
+  align-items: center;
+  color: var(--darkBlue);
+  font-size: 4vw;;
+}
+.abrissarbeitenText{
+  font-size: 2vw;
+  padding: 2vw;
+  text-indent: 1vw;
+}
+
+.fliesenverlegungCard{
+  width: 85%;
+  border: 1px solid var(--darkBlue);
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3vw;
+}
+.fliesenverlegungTop{
+  background-color: var(--blue);
+  border-radius: 20px 20px 0 0;
+}
+.fliesenverlegungImg{
+  width: 7vw;
+  margin: 1vw;
+}
+.fliesenverlegungTitle{
+  display: flex;
+  align-items: center;
+  color: var(--darkBlue);
+  font-size: 4vw;;
+}
+.fliesenverlegungText{
+  font-size: 2vw;
+  padding: 2vw;
+  text-indent: 1vw;
+}

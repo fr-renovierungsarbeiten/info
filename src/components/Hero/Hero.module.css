@@ -1,0 +1,173 @@
+.main {
+  width: 100%;
+  background-image: url("/bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.leftBlock {
+  margin: auto 0;
+  width: 50%;
+}
+
+.pofText {
+  color: var(--seasalt);
+  text-align: center;
+  font-size: 3vw;
+  margin: 8vh 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.altNew {
+  color: var(--white);
+  text-align: center;
+  font-size: 4.5vw;
+  margin: 3vh 0;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  transform: rotate(-4grad);
+}
+
+.rightBlock {
+  margin: 35vh 0;
+}
+.rightBlock1 {
+  position: absolute;
+  margin: auto 0;
+  width: auto;
+  text-align: start;
+  padding: 2vw;
+  
+  background-color: var(--blue);
+  opacity: 0.65;
+  backdrop-filter: blur(10px);
+  filter: blur(10px);
+  border-radius: 2rem;
+}
+.rightBlock2 {
+  position: absolute;
+  margin: auto 0;
+  width: auto;
+  text-align: start;
+  padding: 2vw;
+}
+
+.addressText {
+  color: var(--seasalt);
+  font-size: 2.2vw;
+  margin: 2.2vw;
+  text-shadow: 2px 2px 2px var(--darkBlue);
+}
+.addressText:hover {
+  font-size: 2.2vw;
+  color: var(--darkBlue);
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
+}
+
+.mailBlock{
+  margin: 2vw;
+}
+.mail{
+  color: var(--seasalt);
+  font-size: 2.2vw;
+  text-shadow: 2px 2px 2px var(--darkBlue);
+}
+.mail:hover {
+  font-size: 2.2vw;
+  color: var(--darkBlue);
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
+}
+
+.phonesBlock {
+  margin: 2vw;
+}
+.phone {
+  color: var(--seasalt);
+  font-size: 2.2vw;
+  text-shadow: 2px 2px 2px var(--darkBlue);
+  margin-right: 2.5vw;
+}
+.phone:hover {
+  font-size: 2.2vw;
+  color: var(--darkBlue);
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
+}
+
+.iconLocation {
+  color: var(--seasalt);
+  font-size: 1.8vw;
+  margin-right: 0.5vw;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.iconPhone {
+  color: var(--seasalt);
+  font-size: 1.8vw;
+  margin-right: 0.3vw;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.iconMail {
+  color: var(--seasalt);
+  font-size: 1.8vw;
+  margin-right: 0.5vw;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.footer{
+  width: 100%;
+  background-color: var(--blue);
+  padding: 1vw;
+  margin: 0;
+}
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 80%;
+  margin: auto;
+}
+.footerLogo{
+  width: 18vw;
+  margin: 0.5vw auto;
+}
+
+.footerLeftText{
+  font-size: 1.3vw;
+  margin-top: 0.5vw;
+}
+
+.iconDot{
+  font-size: 0.8vw;
+  color: var(--darkBlue);
+  margin-right: 5px;
+}
+
+.footerButton{
+  color: var(--seasalt);
+  background-color: var(--darkBlue);
+  text-align: center;
+  padding: 0 2vw;
+  margin: 2vw 7vw;
+  border-radius: 1vw;
+}
+.footerButton:hover{
+  color: var(--darkBlue);
+  background-color: var(--seasalt);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+.footerButton:active{
+  color: var(--seasalt);
+  background-color: var(--darkBlue);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+.footerButtonText{
+  font-size: 1.3vw;
+  margin-bottom: 0.5vw;
+}
+.iconButton{
+  font-size: 2vw;
+  margin: 0.8vw;
+}

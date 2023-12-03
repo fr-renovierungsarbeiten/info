@@ -1,0 +1,44 @@
+.addButton {
+  width: 25%;
+  margin-left: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #f24a00;
+  border: #f24a00 solid 1px;
+  border-radius: calc(var(--index));
+  padding: 0.2rem;
+  font-size: 1rem;
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+.addButton:hover {
+  background-color: #fefef7;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.addButton:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+.deleteButton {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+.descriptionInput{
+  padding: 0.2rem;
+  width: 30rem;
+  margin-right: 0.2rem;
+}
+
+.linkInput{
+  padding: 0.2rem;
+  width: 15rem;
+}

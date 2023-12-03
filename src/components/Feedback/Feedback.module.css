@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+.feedback_background {
+  margin: 3vw 0rem;
+}
+.feedbackHeader {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedbackHeaderImg {
+  width: 4vw;
+}
+
+.feedbackHeaderText {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.reviewsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reviewContainer {
+  width: 90%;
+}
+
+.reviewName {
+  margin-top: 1vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  font-family: "Cormorant-Regular", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reviewBody {
+  width: 85%;
+  margin: 1vw auto 3vw;
+  font-size: 1.4vw;
+  font-family: "Cormorant-Regular";
+  text-indent: 1vw;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.reviewButton {
+  padding: 0.6vw 1.4vw;
+  background-color: var(--blue);
+  margin-top: 1vw;
+  color: var(--white);
+  border-radius: 5px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  font-size: 1.1vw;
+  box-shadow: 1px 1px 4px rgba(223, 127, 127, 0.3);
+}
+
+.reviewButton:hover {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
