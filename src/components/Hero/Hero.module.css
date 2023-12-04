@@ -15,7 +15,7 @@
   height: 100vh;
   left: 0;
   background-color: var(--blue);
-  clip-path: polygon(0% 0%, 50% 0%, 95% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 30vw 0%, 65vw 100vw, 0 100vw);
   z-index: 0;
 }
 .blockContainer {
