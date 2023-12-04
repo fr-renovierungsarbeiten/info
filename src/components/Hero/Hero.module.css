@@ -1,150 +1,156 @@
 .main {
   width: 100%;
-  background-image: url("/bg2.jpg");
+  height: 100vh;
+  background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  height: 100vh;
   margin: 0;
+  overflow: hidden;
+}
+.blueBlock {
+  content: "";
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  left: 0;
+  background-color: var(--blue);
+  clip-path: polygon(0% 0%, 50% 0%, 95% 100%, 0 100%);
+  z-index: 0;
+}
+.blockContainer {
   display: flex;
+  flex-direction: column;
+}
+.upperBlock {
+  position: absolute;
+  right: 0;
+  top: 35vh;
+  z-index: 2;
+}
+.bottomBlock {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 68vh;
+  z-index: 2;
+}
+.darkLine {
+  position: absolute;
+  left: 0;
+  top: 77vh;
+  display: flex;
+  justify-content: space-between;
+  width: 99vw;
+  height: 15vh;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.822);
+  z-index: 2;
+}
+.mailBlock {
+  position: absolute;
+  right: 0;
+  top: 92vh;
+  margin: 0 1vw;
 }
 
-.leftBlock {
-  margin: auto 0;
-  width: 50%;
+.phonesBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 5vw;
+  margin-right: 19vw;
 }
-
-.pofText {
+.phone {
   color: var(--seasalt);
-  text-align: center;
+  font-size: 4vw;
+  line-height: 1.5;
+  text-shadow: 2px 2px 2px var(--darkBlue);
+}
+.phone:hover {
+  font-size: 4vw;
+  color: var(--blue);
+}
+.iconPhone {
+  color: var(--seasalt);
   font-size: 3vw;
-  margin: 8vh 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-right: 0.3vw;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 .altNew {
   color: var(--white);
   text-align: center;
   font-size: 4.5vw;
-  margin: 3vh 0;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
-  transform: rotate(-4grad);
-}
-
-.rightBlock {
-  margin: 35vh 0;
-}
-.rightBlock1 {
-  position: absolute;
-  margin: auto 0;
-  width: auto;
-  text-align: start;
-  padding: 2vw;
-  
-  background-color: var(--blue);
-  opacity: 0.65;
-  backdrop-filter: blur(10px);
-  filter: blur(10px);
-  border-radius: 2rem;
-}
-.rightBlock2 {
-  position: absolute;
-  margin: auto 0;
-  width: auto;
-  text-align: start;
-  padding: 2vw;
+  margin: auto 2vw;
 }
 
 .addressText {
   color: var(--seasalt);
   font-size: 2.2vw;
-  margin: 2.2vw;
-  text-shadow: 2px 2px 2px var(--darkBlue);
+  line-height: 1.5;
+  text-align: start;
+  margin: auto 4vw;
+
 }
 .addressText:hover {
   font-size: 2.2vw;
-  color: var(--darkBlue);
-  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
+  color: var(--blue);
 }
 
-.mailBlock{
-  margin: 2vw;
-}
-.mail{
+.pofText {
   color: var(--seasalt);
-  font-size: 2.2vw;
-  text-shadow: 2px 2px 2px var(--darkBlue);
+  font-size: 3vw;
+  margin-left: 4vw;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mail {
+  font-size: 3vw;
+  color: var(--darkBlue);
+  text-shadow: 2px 2px 2px var(--seasalt);
 }
 .mail:hover {
-  font-size: 2.2vw;
-  color: var(--darkBlue);
-  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
-}
-
-.phonesBlock {
-  margin: 2vw;
-}
-.phone {
-  color: var(--seasalt);
-  font-size: 2.2vw;
-  text-shadow: 2px 2px 2px var(--darkBlue);
-  margin-right: 2.5vw;
-}
-.phone:hover {
-  font-size: 2.2vw;
-  color: var(--darkBlue);
-  text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
-}
-
-.iconLocation {
-  color: var(--seasalt);
-  font-size: 1.8vw;
-  margin-right: 0.5vw;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-}
-.iconPhone {
-  color: var(--seasalt);
-  font-size: 1.8vw;
-  margin-right: 0.3vw;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  text-shadow: 4px 4px 2px var(--seasalt);
 }
 .iconMail {
-  color: var(--seasalt);
-  font-size: 1.8vw;
+  color: var(--darkBlue);
+  font-size: 2.5vw;
   margin-right: 0.5vw;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  margin-bottom: -0.5vw;
+  filter: drop-shadow(2px 2px 2px var(--seasalt));
 }
 
-.footer{
+.footer {
   width: 100%;
   background-color: var(--blue);
   padding: 1vw;
   margin: 0;
 }
-.footerContainer{
+.footerContainer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 80%;
   margin: auto;
 }
-.footerLogo{
+.footerLogo {
   width: 18vw;
   margin: 0.5vw auto;
 }
 
-.footerLeftText{
+.footerLeftText {
   font-size: 1.3vw;
   margin-top: 0.5vw;
 }
 
-.iconDot{
+.iconDot {
   font-size: 0.8vw;
   color: var(--darkBlue);
   margin-right: 5px;
 }
 
-.footerButton{
+.footerButton {
   color: var(--seasalt);
   background-color: var(--darkBlue);
   text-align: center;
@@ -152,22 +158,22 @@
   margin: 2vw 7vw;
   border-radius: 1vw;
 }
-.footerButton:hover{
+.footerButton:hover {
   color: var(--darkBlue);
   background-color: var(--seasalt);
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
 }
-.footerButton:active{
+.footerButton:active {
   color: var(--seasalt);
   background-color: var(--darkBlue);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
 }
 
-.footerButtonText{
+.footerButtonText {
   font-size: 1.3vw;
   margin-bottom: 0.5vw;
 }
-.iconButton{
+.iconButton {
   font-size: 2vw;
   margin: 0.8vw;
 }

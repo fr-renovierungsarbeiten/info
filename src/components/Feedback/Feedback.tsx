@@ -8,7 +8,8 @@ import {
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import css from "./Feedback.module.css";
-import feedbackImg from "/feedback.png";
+// import feedbackImg from "/feedback.png";
+import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -50,12 +51,16 @@ const Feedback: FC = () => {
     <>
       <div className={css.feedback_background} id="Feedback">
         <div className={`${css.feedbackHeader} container`}>
-          <img
+          {/* <img
             className={css.feedbackHeaderImg}
             src={feedbackImg}
             alt="feedback"
-          />
-          <h2 className={css.feedbackHeaderText}>Kundenbewertungen</h2>
+          /> */}
+          <h2 className={css.feedbackHeaderText}>
+            <BorderColorOutlinedIcon 
+            className={css.feedbaccommentIco} />
+            Kundenbewertungen
+          </h2>
           {reviews?.length > 0 && (
             <Swiper
               spaceBetween={30}

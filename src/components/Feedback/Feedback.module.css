@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 .feedback_background {
-  margin: 3vw 0rem;
+  margin: 0;
 }
 .feedbackHeader {
   width: 90%;
@@ -9,13 +9,15 @@
   align-items: center;
 }
 
-.feedbackHeaderImg {
-  width: 4vw;
+.feedbaccommentIco{
+  color: var(--darkBlue);
+  margin: -2px 10px;
 }
 
 .feedbackHeaderText {
+  color: var(--darkBlue);
   font-size: 1.5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 0.5vw;
 }
 
 .reviewsContainer {

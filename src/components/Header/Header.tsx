@@ -5,12 +5,21 @@ import { Link } from "react-router-dom";
 
 export default function Header(): JSX.Element {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const windowHeight = window.innerHeight - 80;
+  const [filterBrightness, setFilterBrightness] = useState(0);
+  const [filterInvert, setFilterInvert] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 800) {
+      if (window.scrollY < windowHeight) {
         setScrollPosition(window.scrollY);
-      } else {setScrollPosition(900)}
+        setFilterBrightness(0);
+        setFilterInvert(1);
+      } else {
+        setScrollPosition(windowHeight);
+        setFilterBrightness(1);
+        setFilterInvert(0);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -18,9 +27,9 @@ export default function Header(): JSX.Element {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [windowHeight]);
 
-  const headerHeight = Math.max(16 - (scrollPosition/50), 8);
+  const headerHeight = Math.max(20 - scrollPosition / 100, 8);
 
   return (
     <div
@@ -29,7 +38,10 @@ export default function Header(): JSX.Element {
     >
       <img
         className={css.logo}
-        style={{ height: `${headerHeight-1}vh` }}
+        style={{
+          height: `${headerHeight - 1}vh`,
+          filter: `brightness(${filterBrightness}) invert(${filterInvert})`,
+        }}
         src={logo}
         alt="logo"
       />
@@ -41,7 +53,7 @@ export default function Header(): JSX.Element {
           </li>
           <li className={css.link}>
             <Link to="#leistungen">Leistungen</Link>
-          </li>          
+          </li>
           <li className={css.link}>
             <Link to="#projecte">Projekte</Link>
           </li>

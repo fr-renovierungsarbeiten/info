@@ -18,6 +18,7 @@
   height: 5vh;
   margin-left: 3vw;
   transition: height 0.1s ease;
+  transition: filter 0.3s ease;
 }
 
 .navigate{
