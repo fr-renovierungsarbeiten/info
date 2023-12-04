@@ -48,7 +48,9 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
       "\n  Рейтинг: " +
       inputRating +
       "\n\n  " +
-      inputReview;
+      inputReview +
+      "\n\n https://fr-renovierungsarbeiten.github.io/info" +
+      `${import.meta.env.VITE_REACT_APP_ROUTE}`;
     sendMessageToTelegram(message);
 
     setInputName("");

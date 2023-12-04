@@ -1,10 +1,10 @@
 .main {
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: cover;
+  background-size: contain;
   margin: 0;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
   height: 100%;
   left: 0;
   background-color: var(--blue);
-  clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 0% 100%);
   z-index: 0;
 }
 .blockContainer {
@@ -32,13 +32,13 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: 68vh;
+  top: 65vh;
   z-index: 2;
 }
 .darkLine {
   position: absolute;
   left: 0;
-  top: 77vh;
+  top: 74vh;
   display: flex;
   justify-content: space-between;
   width: 99%;
@@ -50,7 +50,7 @@
 .mailBlock {
   position: absolute;
   right: 0;
-  top: 92vh;
+  top: 90vh;
   margin: 0 1vw;
 }
 
