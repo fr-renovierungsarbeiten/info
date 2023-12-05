@@ -8,8 +8,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import css from "./Feedback.module.css";
-// import feedbackImg from "/feedback.png";
-import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -51,14 +50,13 @@ const Feedback: FC = () => {
     <>
       <div className={css.feedback_background} id="Feedback">
         <div className={`${css.feedbackHeader} container`}>
-          {/* <img
-            className={css.feedbackHeaderImg}
-            src={feedbackImg}
-            alt="feedback"
-          /> */}
           <h2 className={css.feedbackHeaderText}>
-            <BorderColorOutlinedIcon 
-            className={css.feedbaccommentIco} />
+            <BorderColorOutlinedIcon
+              className={css.feedbaccommentIco}
+              style={{
+                transform: `scale(${calculateRecapchaScale()})`,
+              }}
+            />
             Kundenbewertungen
           </h2>
           {reviews?.length > 0 && (
@@ -90,10 +88,13 @@ const Feedback: FC = () => {
                       <strong>{el.item.name}</strong>
                     </p>
 
-                    <Rating name="ratingR" value={el.item.rating} readOnly 
-                    style={{
-                      transform: `scale(${calculateRecapchaScale()})`,
-                    }}
+                    <Rating
+                      name="ratingR"
+                      value={el.item.rating}
+                      readOnly
+                      style={{
+                        transform: `scale(${calculateRecapchaScale()})`,
+                      }}
                     />
                     <div className={css.reviewBody}>{el.item.review}</div>
                   </div>

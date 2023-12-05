@@ -11,13 +11,12 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
-  transition: height 0.1s ease;
 }
 
 .logo{
   height: 5vh;
   margin-left: 3vw;
-  transition: height 0.1s ease;
+  transition: height 0.2s ease;
   transition: filter 0.3s ease;
 }
 
