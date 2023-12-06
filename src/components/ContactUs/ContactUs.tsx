@@ -84,11 +84,11 @@ export default function Contacts(): JSX.Element {
             <div className={css.phonesBlock}>
                 <SlPhone className={css.iconPhone} />
               <span className={css.spanText}> Phone: </span>
-              <a href="tel:01775729872" className={css.phone}>
-                01775729872
-              </a>
               <a href="tel:01631288635" className={css.phone}>
                 01631288635
+              </a>
+              <a href="tel:01775729872" className={css.phone}>
+                01775729872
               </a>
             </div>
           </div>

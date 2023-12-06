@@ -5,7 +5,6 @@ import logo2 from "/logo2.png";
 import css from "./Hero.module.css";
 
 import { MdPhoneIphone } from "react-icons/md";
-import { MdAlternateEmail } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -16,24 +15,24 @@ export default function Hero(): JSX.Element {
     <>
       <Header />
       <div id="main" className={css.main}>
+        <div className={css.whiteBlock}></div>
         <div className={css.blueBlock}></div>
         <div className={css.blockContainer}>
           <div className={css.upperBlock}>
             <div className={css.phonesBlock}>
-              <a href="tel:01775729872" className={css.phone}>
-                <MdPhoneIphone className={css.iconPhone} />
-                01775729872
-              </a>
               <a href="tel:01631288635" className={css.phone}>
                 <MdPhoneIphone className={css.iconPhone} />
                 01631288635
+              </a>
+              <a href="tel:01775729872" className={css.phone}>
+                <MdPhoneIphone className={css.iconPhone} />
+                01775729872
               </a>
             </div>
           </div>
 
           <div className={css.bottomBlock}>
-              <p className={css.pofText}>Professionelle Sanierung</p>
-
+            <p className={css.pofText}>Professionelle Sanierung</p>
           </div>
 
           <div className={css.darkLine}>
@@ -50,14 +49,13 @@ export default function Hero(): JSX.Element {
           </div>
 
           <div className={css.mailBlock}>
-                <a
-                  href="mailto:rostyslav.felyshchuk@gmail.com"
-                  className={css.mail}
-                >
-                  <MdAlternateEmail className={css.iconMail} />
-                  rostyslav.felyshchuk@gmail.com
-                </a>
-              </div>
+            <a
+              href="mailto:rostyslav.felyshchuk@gmail.com"
+              className={css.mail}
+            >
+              rostyslav.felyshchuk@gmail.com
+            </a>
+          </div>
         </div>
       </div>
 
@@ -105,7 +103,7 @@ export default function Hero(): JSX.Element {
               Bodenlegearbeiten
             </p>
           </div>
-          <a href="tel:01775729872" className={css.footerButton}>
+          <a href="tel:01631288635" className={css.footerButton}>
             <FaPhoneVolume className={css.iconButton} /> <br />
             <p className={css.footerButtonText}>Jetzt kontaktieren</p>
           </a>

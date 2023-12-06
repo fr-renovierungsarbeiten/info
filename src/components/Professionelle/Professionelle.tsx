@@ -14,7 +14,7 @@ export default function Professionelle() {
           und Altbauten mit hoher Qualität und Zuverlässigkeit
         </p>
         <p className={css.punktText}>
-          <FaCheck className={css.check} /> Sanierungen von Altbauwohnungen in
+          <FaCheck className={css.check} /> Sanierungen Altbauwohnungen in
           Berlin{" "}
         </p>
         <p className={css.punktText}>
