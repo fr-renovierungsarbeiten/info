@@ -47,18 +47,6 @@
   top: 65vh;
   z-index: 3;
 }
-.darkLine {
-  position: absolute;
-  left: 0;
-  top: 74vh;
-  display: flex;
-  justify-content: space-between;
-  width: 99%;
-  height: 15vh;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.822);
-  z-index: 3;
-}
 .mailBlock {
   position: absolute;
   right: 4vw;
@@ -66,6 +54,19 @@
   margin: 0 1vw;
   z-index: 3;
 }
+.darkLine {
+  position: absolute;
+  left: 0;
+  top: 74vh;
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+  /* height: 15vh; */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.822);
+  z-index: 3;
+}
+
 
 .phonesBlock {
   display: flex;
@@ -95,15 +96,16 @@
   color: var(--white);
   text-align: center;
   font-size: 4.5vw;
-  margin: auto 2vw;
+  margin: 1vw 2vw;
 }
 
 .addressText {
   color: var(--seasalt);
   font-size: 2.2vw;
   line-height: 1.5;
-  text-align: start;
-  margin: auto 4vw;
+  text-align: right;
+  padding-right: 4vw;
+  margin: auto 0;
 }
 .addressText:hover {
   font-size: 2.2vw;

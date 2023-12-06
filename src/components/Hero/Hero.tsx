@@ -41,9 +41,9 @@ export default function Hero(): JSX.Element {
               <p className={css.altNew}>WIRD NEU</p>
             </div>
             <div className={css.address}>
-              <Link to="#Contacts" className={css.addressText}>
-                14480 Potsdam, <br />
-                Hans-Grade-Ring 36
+              <Link to="#Contacts" >
+                <p className={css.addressText}>14480 Potsdam,</p>
+                <p className={css.addressText}>Hans-Grade-Ring 36</p>
               </Link>
             </div>
           </div>
