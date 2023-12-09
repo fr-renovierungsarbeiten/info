@@ -1,13 +1,12 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import InputMask from "react-input-mask";
-import css from "./ContactUs.module.css";
+import scss from "./ContactUs.module.scss";
 import { initContacUsForm } from "./interfaces/IContactUsForm";
 import { Container, TextField } from "@mui/material";
 import sendMessageToTelegram from "../../services/Notice/sendMessageToTelegram";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import { SlEnvolope, SlHome, SlPhone } from "react-icons/sl";
-import { calculateRecapchaScale } from "../../services/scaleService";
 
 export default function Contacts(): JSX.Element {
   const [
@@ -55,53 +54,61 @@ export default function Contacts(): JSX.Element {
 
   return (
     <>
-      <div className={css.contactsMain} id="Contacts">
-        <div className={css.contactsContainer}>
-          <div className={css.leftBlock}>
-        <h2 className={css.title}>KONTAKT</h2>
+      <div className={scss.contactsMain} id="Contacts">
+        <div className={`${scss.contactsContainer} + container`}>
+          <div className={scss.leftBlock}>
+            <h2 className={scss.title}>KONTAKT</h2>
 
-            <div className={css.nameBlock}>
-              <p className={css.nameText}>Rostyslav Felyshchuk</p>
-            </div>
-            <div className={css.address}>
-              <p className={css.addressText}>
-                <SlHome className={css.iconLocation} />
-                Adresse: 14480 Potsdam, Hans-Grade-Ring 36
-              </p>
+            <div className={scss.nameBlock}>
+              <p className={scss.nameText}>Rostyslav Felyshchuk</p>
             </div>
 
-            <div className={css.mailBlock}>
-              <SlEnvolope className={css.iconMail} />
-              <span className={css.spanText}> E-mail: </span>
-              <a
-                href="mailto:rostyslav.felyshchuk@gmail.com"
-                className={css.mail}
-              >
-                rostyslav.felyshchuk@gmail.com
-              </a>
-            </div>
-
-            <div className={css.phonesBlock}>
-                <SlPhone className={css.iconPhone} />
-              <span className={css.spanText}> Phone: </span>
-              <a href="tel:01775729872" className={css.phone}>
-                01775729872
-              </a>
-              <a href="tel:01631288635" className={css.phone}>
-                01631288635
-              </a>
-            </div>
+            <ul>
+              <li className={scss.item}>
+                <SlHome className={scss.icon} />
+                <span className={scss.spanText}>Adresse: </span>
+                <a
+                  className={scss.link}
+                  href={`http://maps.google.com/?q=:14480 Potsdam, Hans-Grade-Ring 36`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="address"
+                >
+                  14480 Potsdam, Hans-Grade-Ring 36
+                </a>
+              </li>
+              <li className={scss.item}>
+                <SlEnvolope className={scss.icon} />
+                <span className={scss.spanText}> E-mail: </span>
+                <a
+                  href="mailto:rostyslav.felyshchuk@gmail.com"
+                  className={scss.link}
+                >
+                  rostyslav.felyshchuk@gmail.com
+                </a>
+              </li>
+              <li className={scss.item}>
+                <SlPhone className={scss.icon} />
+                <span className={scss.spanText}> Phone: </span>
+                <a href="tel:01775729872" className={scss.link}>
+                  01775729872
+                </a>
+                <a href="tel:01631288635" className={scss.link}>
+                  01631288635
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div className={css.rightBlock}>
+          <div className={scss.rightBlock}>
             <Container>
-              <h3>Haben Sie eine Frage an uns?</h3>
+              <h3 className={scss.form_title}>Haben Sie eine Frage an uns?</h3>
               <br />
               <form
-                className={css.contacts_form}
+                className={scss.contacts_form}
                 onSubmit={handleCreateRequest}
               >
-                <div className={css.contacts_input_div}>
+                <div className={scss.contacts_input_div}>
                   <TextField
                     className="form-control"
                     label="Vorname"
@@ -114,7 +121,7 @@ export default function Contacts(): JSX.Element {
                     required
                   />
                 </div>
-                <div className={css.contacts_input_div}>
+                <div className={scss.contacts_input_div}>
                   <TextField
                     className="form-control"
                     label="Name"
@@ -127,7 +134,7 @@ export default function Contacts(): JSX.Element {
                     required
                   />
                 </div>
-                <div className={css.contacts_input_div}>
+                <div className={scss.contacts_input_div}>
                   <TextField
                     className="form-control"
                     label="E-Mail"
@@ -140,10 +147,10 @@ export default function Contacts(): JSX.Element {
                     required
                   />
                 </div>
-                <div className={css.contacts_input_div}>
+                <div className={scss.contacts_input_div}>
                   <InputMask
                     mask="+4 9(999) 999-9999"
-                    className={css.form_control}
+                    className={scss.form_control}
                     type="tel"
                     placeholder="+4 9(___) ___-____"
                     name="phoneNumber"
@@ -151,12 +158,12 @@ export default function Contacts(): JSX.Element {
                     onChange={collectAboutUsData}
                   />
                 </div>
-                <p className={css.contacts_info}>
+                <p className={scss.contacts_info}>
                   Wir werden Ihre Daten niemals mit jemand anderem teilen
                 </p>
                 <div>
                   <textarea
-                    className={css.questionTextInput}
+                    className={scss.questionTextInput}
                     id="questionTextInput"
                     rows={6}
                     maxLength={maxLength}
@@ -167,25 +174,25 @@ export default function Contacts(): JSX.Element {
                     style={{ resize: "none" }}
                     required
                   />
-                  <p className={css.contacts_info_charLeft}>
+                  <p className={scss.contacts_info_charLeft}>
                     Noch {charLeft} Zeichen verfügbar
                   </p>
                 </div>
-                <div className={css.recapcha}>
+                <div className={scss.recapcha}>
                   <ReCAPTCHA
                     style={{
-                      transform: `scale(${calculateRecapchaScale()})`,
+                      transform: `scale(0.8)`,
                     }}
                     sitekey={`${import.meta.env.VITE_REACT_APP_RECAPCHA}`}
                     onChange={handleRecaptchaChange}
                   />
                 </div>
-                <div className={css.btnContainer}>
+                <div className={scss.btnContainer}>
                   <button
                     type="submit"
                     disabled={!isReCapcha}
                     className={
-                      isReCapcha ? css.requestButton : css.requestButtonOff
+                      isReCapcha ? scss.requestButton : scss.requestButtonOff
                     }
                   >
                     Anfrage senden
@@ -198,7 +205,7 @@ export default function Contacts(): JSX.Element {
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9742.133216615364!2d13.116959698364251!3d52.37888189724196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85f15177ae319%3A0xc00070f77ab1cd24!2sHans-Grade-Ring%2036%2C%2014480%20Potsdam!5e0!3m2!1sru!2sde"
-          className={css.map}
+          className={scss.map}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

@@ -91,7 +91,6 @@
   line-height: 1.5;
   text-align: start;
   margin: auto 4vw;
-
 }
 .addressText:hover {
   font-size: 2.2vw;
@@ -119,61 +118,4 @@
   margin-right: 0.5vw;
   margin-bottom: -0.5vw;
   filter: drop-shadow(2px 2px 2px var(--seasalt));
-}
-
-.footer {
-  width: 100%;
-  background-color: var(--blue);
-  padding: 1vw;
-  margin: 0;
-}
-.footerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 80%;
-  margin: auto;
-}
-.footerLogo {
-  width: 18vw;
-  margin: 0.5vw auto;
-}
-
-.footerLeftText {
-  font-size: 1.3vw;
-  margin-top: 0.5vw;
-}
-
-.iconDot {
-  font-size: 0.8vw;
-  color: var(--darkBlue);
-  margin-right: 5px;
-}
-
-.footerButton {
-  color: var(--seasalt);
-  background-color: var(--darkBlue);
-  text-align: center;
-  padding: 0 2vw;
-  margin: 2vw 7vw;
-  border-radius: 1vw;
-}
-.footerButton:hover {
-  color: var(--darkBlue);
-  background-color: var(--seasalt);
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-}
-.footerButton:active {
-  color: var(--seasalt);
-  background-color: var(--darkBlue);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
-}
-
-.footerButtonText {
-  font-size: 1.3vw;
-  margin-bottom: 0.5vw;
-}
-.iconButton {
-  font-size: 2vw;
-  margin: 0.8vw;
 }

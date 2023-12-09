@@ -1,0 +1,28 @@
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+}
+.menu_title {
+  display: flex;
+  font-family: "Fira Sans";
+  font-size: 24px;
+  color: rgb(255, 255, 255, 25%);
+  transition: color 200ms ease-in-out;
+  gap: 6px;
+  &:hover {
+    color: var(--white);
+  }
+}
+.menu_item {
+  margin-bottom: 1rem;
+}
+.menu_link {
+  font-size: 1.7rem;
+  color: var(--darkBlue);
+  text-decoration: none;
+}
+.menu_link:hover {
+  color: var(--white);
+}
