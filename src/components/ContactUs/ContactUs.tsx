@@ -62,42 +62,6 @@ export default function Contacts(): JSX.Element {
             <div className={scss.nameBlock}>
               <p className={scss.nameText}>Rostyslav Felyshchuk</p>
             </div>
-
-            <ul>
-              <li className={scss.item}>
-                <SlHome className={scss.icon} />
-                <span className={scss.spanText}>Adresse: </span>
-                <a
-                  className={scss.link}
-                  href={`http://maps.google.com/?q=:14480 Potsdam, Hans-Grade-Ring 36`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="address"
-                >
-                  14480 Potsdam, Hans-Grade-Ring 36
-                </a>
-              </li>
-              <li className={scss.item}>
-                <SlEnvolope className={scss.icon} />
-                <span className={scss.spanText}> E-mail: </span>
-                <a
-                  href="mailto:rostyslav.felyshchuk@gmail.com"
-                  className={scss.link}
-                >
-                  rostyslav.felyshchuk@gmail.com
-                </a>
-              </li>
-              <li className={scss.item}>
-                <SlPhone className={scss.icon} />
-                <span className={scss.spanText}> Phone: </span>
-                <a href="tel:01775729872" className={scss.link}>
-                  01775729872
-                </a>
-                <a href="tel:01631288635" className={scss.link}>
-                  01631288635
-                </a>
-              </li>
-            </ul>
           </div>
 
           <div className={scss.rightBlock}>

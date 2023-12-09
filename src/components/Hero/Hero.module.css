@@ -8,15 +8,26 @@
   margin: 0;
   overflow: hidden;
 }
-.blueBlock {
+.whiteBlock {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
+  top: 0;
+  background-color: white;
+  opacity: 0.3;
+  z-index: 1;
+}
+.blueBlock {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
   background-color: var(--blue);
   clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 0% 100%);
-  z-index: 0;
+  z-index: 2;
 }
 .blockContainer {
   display: flex;
@@ -25,15 +36,22 @@
 .upperBlock {
   position: absolute;
   right: 0;
-  top: 35vh;
-  z-index: 2;
+  top: 28vh;
+  z-index: 3;
 }
 .bottomBlock {
   width: 100%;
   position: absolute;
   left: 0;
   top: 65vh;
-  z-index: 2;
+  z-index: 3;
+}
+.mailBlock {
+  position: absolute;
+  right: 4vw;
+  top: 65vh;
+  margin: 0 1vw;
+  z-index: 3;
 }
 .darkLine {
   position: absolute;
@@ -42,16 +60,10 @@
   display: flex;
   justify-content: space-between;
   width: 99%;
-  height: 15vh;
+  /* height: 15vh; */
   margin: 0;
   background-color: rgba(0, 0, 0, 0.822);
-  z-index: 2;
-}
-.mailBlock {
-  position: absolute;
-  right: 0;
-  top: 90vh;
-  margin: 0 1vw;
+  z-index: 3;
 }
 
 .phonesBlock {
@@ -82,7 +94,7 @@
   color: var(--white);
   text-align: center;
   font-size: 4.5vw;
-  margin: auto 2vw;
+  margin: 1vw 2vw;
 }
 
 .addressText {
@@ -91,6 +103,9 @@
   line-height: 1.5;
   text-align: start;
   margin: auto 4vw;
+  text-align: right;
+  padding-right: 4vw;
+  margin: auto 0;
 }
 .addressText:hover {
   font-size: 2.2vw;
@@ -106,8 +121,8 @@
 
 .mail {
   font-size: 3vw;
-  color: var(--darkBlue);
-  text-shadow: 2px 2px 2px var(--seasalt);
+  color: var(--seasalt);
+  text-shadow: 3px 3px 2px var(--darkBlue);
 }
 .mail:hover {
   text-shadow: 4px 4px 2px var(--seasalt);
