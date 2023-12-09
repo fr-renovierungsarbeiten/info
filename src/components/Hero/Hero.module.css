@@ -1,6 +1,7 @@
 .main {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  aspect-ratio: 1.95;
   background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -12,7 +13,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1.95;
   left: 0;
   top: 0;
   background-color: white;
@@ -23,7 +24,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 100vh;
+  aspect-ratio: 1.95;
   left: 0;
   background-color: var(--blue);
   clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 0% 100%);
@@ -36,31 +37,29 @@
 .upperBlock {
   position: absolute;
   right: 0;
-  top: 28vh;
+  top: 28%;
   z-index: 3;
 }
 .bottomBlock {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 65vh;
+  top: 65%;
   z-index: 3;
 }
 .mailBlock {
   position: absolute;
   right: 4vw;
-  top: 65vh;
-  margin: 0 1vw;
+  top: 65%;
   z-index: 3;
 }
 .darkLine {
   position: absolute;
   left: 0;
-  top: 74vh;
+  top: 74%;
   display: flex;
   justify-content: space-between;
   width: 99%;
-  /* height: 15vh; */
   margin: 0;
   background-color: rgba(0, 0, 0, 0.822);
   z-index: 3;
@@ -75,17 +74,16 @@
 }
 .phone {
   color: var(--seasalt);
-  font-size: 4vw;
+  font-size: clamp(16px, 4vw, 180px);
   line-height: 1.5;
   text-shadow: 2px 2px 2px var(--darkBlue);
 }
 .phone:hover {
-  font-size: 4vw;
   color: var(--blue);
 }
 .iconPhone {
   color: var(--seasalt);
-  font-size: 3vw;
+  font-size: clamp(14px, 3vw, 170px);
   margin-right: 0.3vw;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
@@ -94,21 +92,19 @@
   color: var(--white);
   text-align: center;
   font-size: 4.5vw;
-  margin: 1vw 2vw;
+  margin: auto 2vw;
 }
 
 .addressText {
   color: var(--seasalt);
   font-size: 2.2vw;
+  font-size: clamp(10px, 2.2vw, 145px);
   line-height: 1.5;
-  text-align: start;
-  margin: auto 4vw;
   text-align: right;
   padding-right: 4vw;
   margin: auto 0;
 }
 .addressText:hover {
-  font-size: 2.2vw;
   color: var(--blue);
 }
 
@@ -125,12 +121,6 @@
   text-shadow: 3px 3px 2px var(--darkBlue);
 }
 .mail:hover {
-  text-shadow: 4px 4px 2px var(--seasalt);
-}
-.iconMail {
-  color: var(--darkBlue);
-  font-size: 2.5vw;
-  margin-right: 0.5vw;
-  margin-bottom: -0.5vw;
-  filter: drop-shadow(2px 2px 2px var(--seasalt));
+  color: var(--blue);
+  text-shadow: 3px 3px 2px var(--darkBlue);
 }

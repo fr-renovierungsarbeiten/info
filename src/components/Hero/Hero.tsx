@@ -1,19 +1,19 @@
-// import css from "./Hero.module.css";
+import css from "./Hero.module.css";
 import Header from "../Header/Header";
 import Gallery from "../Gallery/Gallery";
 import Contacts from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
 
-// import { MdPhoneIphone } from "react-icons/md";
+import { MdPhoneIphone } from "react-icons/md";
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Professionelle from "../Professionelle/Professionelle";
 
 export default function Hero(): JSX.Element {
   return (
     <>
       <Header />
-      {/* <div id="main" className={css.main}>
+      <div id="main" className={css.main}>
         <div className={css.whiteBlock}></div>
         <div className={css.blueBlock}></div>
         <div className={css.blockContainer}>
@@ -26,10 +26,6 @@ export default function Hero(): JSX.Element {
               <a href="tel:01775729872" className={css.phone}>
                 <MdPhoneIphone className={css.iconPhone} />
                 01775729872
-              </a>
-              <a href="tel:01631288635" className={css.phone}>
-                <MdPhoneIphone className={css.iconPhone} />
-                01631288635
               </a>
             </div>
           </div>
@@ -60,7 +56,7 @@ export default function Hero(): JSX.Element {
             </a>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <Professionelle />
       <Gallery />
