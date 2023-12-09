@@ -7,7 +7,7 @@ import {
   query,
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
-import css from "./Feedback.module.css";
+import scss from "./Feedback.module.scss";
 import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -48,11 +48,11 @@ const Feedback: FC = () => {
 
   return (
     <>
-      <div className={css.feedback_background} id="Feedback">
-        <div className={`${css.feedbackHeader} container`}>
-          <h2 className={css.feedbackHeaderText}>
+      <div className={scss.feedback_background} id="Feedback">
+        <div className={`${scss.feedbackHeader}`}>
+          <h2 className={scss.feedback_header_text}>
             <BorderColorOutlinedIcon
-              className={css.feedbaccommentIco}
+              className={scss.feedbaccomment_ico}
               style={{
                 transform: `scale(${calculateRecapchaScale()})`,
               }}
@@ -73,7 +73,6 @@ const Feedback: FC = () => {
               modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
               style={{
                 width: "90%",
-                height: "auto",
               }}
               className="mySwiper"
             >
@@ -82,8 +81,8 @@ const Feedback: FC = () => {
                   key={el.id}
                   style={{ opacity: 1, pointerEvents: "none" }}
                 >
-                  <div className={css.reviewsContainer}>
-                    <p className={css.reviewName}>
+                  <div className={scss.reviewsContainer}>
+                    <p className={scss.review_name}>
                       {" "}
                       <strong>{el.item.name}</strong>
                     </p>
@@ -96,13 +95,13 @@ const Feedback: FC = () => {
                         transform: `scale(${calculateRecapchaScale()})`,
                       }}
                     />
-                    <div className={css.reviewBody}>{el.item.review}</div>
+                    <div className={scss.review_body}>{el.item.review}</div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
           )}
-          <button className={css.reviewButton} onClick={() => modalShow()}>
+          <button className={scss.reviewButton} onClick={() => modalShow()}>
             Bewertung schreiben
           </button>
           {isModalShow && <Modal setModalHide={setIsModalShow} />}

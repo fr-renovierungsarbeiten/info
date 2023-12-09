@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import css from "./Statistics.module.css";
+import scss from "./Statistics.module.scss";
 import { useSpring, animated } from "react-spring";
 interface IStat {
   endValue: number;
@@ -16,7 +16,7 @@ const CountUpAnimation = ({ endValue }: IStat) => {
   });
 
   return (
-    <animated.span ref={ref} className={css.circle}>
+    <animated.span ref={ref} className={scss.circle}>
       {number.to((val) => Math.floor(val))}
     </animated.span>
   );

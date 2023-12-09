@@ -1,5 +1,5 @@
 import { useSpring, animated } from "react-spring";
-import css from "./Statistics.module.css";
+import scss from "./Statistics.module.scss";
 import { useInView } from "react-intersection-observer";
 interface IProcent {
   value: number;
@@ -20,7 +20,7 @@ const AnimatedCounter2: React.FC<IProcent> = ({ value }) => {
   return (
     <animated.span
       ref={ref}
-      className={css.card_line}
+      className={scss.card_line}
       style={{ width: number.to((val) => `${val.toFixed(2)}%`) }}
     />
   );

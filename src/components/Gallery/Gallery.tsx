@@ -7,7 +7,7 @@ import {
   query,
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
-import css from "./Gallery.module.css";
+import scss from "./Gallery.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -39,9 +39,9 @@ const Gallery: FC = () => {
   }, []);
 
   return (
-    <>
-      <div className={css.gallery} id="projecte">
-        <h2 className={css.galleryHeaderText}>BEISPIELPROJEKTE</h2>
+    <section className={scss.gallery_section}>
+      <div className={scss.gallery} id="projecte">
+        <h2 className={scss.galleryHeaderText}>BEISPIELPROJEKTE</h2>
         {gallery?.length > 0 && (
           <Swiper
             spaceBetween={30}
@@ -56,7 +56,6 @@ const Gallery: FC = () => {
               pauseOnMouseEnter: true,
             }}
             pagination={{
-              // type: 'fraction',
               dynamicBullets: true,
               clickable: true,
             }}
@@ -69,11 +68,15 @@ const Gallery: FC = () => {
           >
             {gallery.map((el) => (
               <SwiperSlide key={el.id} style={{ opacity: 1 }}>
-                <div className={css.imageContainer}>
+                <div className={scss.imageContainer}>
                   <div className="swiper-zoom-container">
-                    <img className={css.image} src={el.item.link} alt="image" />
+                    <img
+                      className={scss.image}
+                      src={el.item.link}
+                      alt="image"
+                    />
                   </div>
-                  <p className={css.ImageDescription}>{el.item.description}</p>
+                  <p className={scss.ImageDescription}>{el.item.description}</p>
                   <br />
                 </div>
               </SwiperSlide>
@@ -81,7 +84,7 @@ const Gallery: FC = () => {
           </Swiper>
         )}
       </div>
-    </>
+    </section>
   );
 };
 

@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import css from "./Header.module.css";
+import scss from "./Header.module.scss";
 import logo from "/logo.png";
+import { VscMenu } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import ModalMenu from "./Modal/Modal";
 
 export default function Header(): JSX.Element {
+  const [isOpen, setIsOpen] = useState(false);
+  const onOpen = () => setIsOpen(true);
+  const onClose = () => setIsOpen(false);
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const windowHeight = window.innerHeight - 80;
   const [filterBrightness, setFilterBrightness] = useState(0);
@@ -29,15 +34,15 @@ export default function Header(): JSX.Element {
     };
   }, [windowHeight]);
 
-  const headerHeight = Math.max(20 - scrollPosition / 100, 8);
+  const headerHeight = Math.max(15 - scrollPosition / 100, 8);
 
   return (
-    <div
-      className={css.headerContainer}
+    <header
+      className={`${scss.headerContainer} + container`}
       style={{ height: `${headerHeight}vh` }}
     >
       <img
-        className={css.logo}
+        className={scss.logo}
         style={{
           height: `${headerHeight - 1}vh`,
           filter: `brightness(${filterBrightness}) invert(${filterInvert})`,
@@ -47,21 +52,26 @@ export default function Header(): JSX.Element {
       />
 
       <nav>
-        <ul className={css.navigate}>
-          <li className={css.link}>
+        <ul className={scss.navigate}>
+          <li className={scss.link}>
             <Link to="#uberUns">Über uns</Link>
           </li>
-          <li className={css.link}>
+          <li className={scss.link}>
             <Link to="#leistungen">Leistungen</Link>
           </li>
-          <li className={css.link}>
+          <li className={scss.link}>
             <Link to="#projecte">Projekte</Link>
           </li>
-          <li className={css.link}>
+          <li className={scss.link}>
             <Link to="#Contacts">Kontakt</Link>
           </li>
         </ul>
+        <button type="button" className={scss.burger_btn} onClick={onOpen}>
+          <VscMenu size={24} />
+        </button>
       </nav>
-    </div>
+
+      {isOpen && <ModalMenu onClose={onClose} />}
+    </header>
   );
 }

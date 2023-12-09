@@ -1,7 +1,7 @@
 .headerContainer {
   position: fixed;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   top: 0;
   left: 0;
@@ -11,6 +11,9 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
+  @media screen and (min-width: 700px) {
+    align-items: flex-end;
+  }
 }
 
 .logo {
@@ -21,13 +24,38 @@
 }
 
 .navigate {
+  display: none;
+  margin-right: 40px;
+  @media screen and (min-width: 700px) {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.burger_btn {
   display: flex;
-  margin-right: 4vw;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue);
+  border-radius: 100%;
+  margin-right: 30px;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.2);
+  }
+  @media screen and (min-width: 699px) {
+    display: none;
+  }
 }
 
 .link {
   margin: 0.7vw;
-  font-size: 1.8vw;
+  font-size: 2vw;
   color: var(--darkBlue);
   position: relative;
   text-decoration: none;

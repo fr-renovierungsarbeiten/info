@@ -1,20 +1,19 @@
-import Contacts from "../ContactUs/ContactUs";
-import Gallery from "../Gallery/Gallery";
+// import css from "./Hero.module.css";
 import Header from "../Header/Header";
-import logo2 from "/logo2.png";
-import css from "./Hero.module.css";
+import Gallery from "../Gallery/Gallery";
+import Contacts from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
 
-import { MdPhoneIphone } from "react-icons/md";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { GoDotFill } from "react-icons/go";
-import { Link } from "react-router-dom";
+// import { MdPhoneIphone } from "react-icons/md";
+
+// import { Link } from "react-router-dom";
 import Professionelle from "../Professionelle/Professionelle";
 
 export default function Hero(): JSX.Element {
   return (
     <>
       <Header />
-      <div id="main" className={css.main}>
+      {/* <div id="main" className={css.main}>
         <div className={css.whiteBlock}></div>
         <div className={css.blueBlock}></div>
         <div className={css.blockContainer}>
@@ -27,6 +26,10 @@ export default function Hero(): JSX.Element {
               <a href="tel:01775729872" className={css.phone}>
                 <MdPhoneIphone className={css.iconPhone} />
                 01775729872
+              </a>
+              <a href="tel:01631288635" className={css.phone}>
+                <MdPhoneIphone className={css.iconPhone} />
+                01631288635
               </a>
             </div>
           </div>
@@ -41,7 +44,7 @@ export default function Hero(): JSX.Element {
               <p className={css.altNew}>WIRD NEU</p>
             </div>
             <div className={css.address}>
-              <Link to="#Contacts" >
+              <Link to="#Contacts">
                 <p className={css.addressText}>14480 Potsdam,</p>
                 <p className={css.addressText}>Hans-Grade-Ring 36</p>
               </Link>
@@ -57,58 +60,12 @@ export default function Hero(): JSX.Element {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Professionelle />
       <Gallery />
       <Contacts />
-
-      <div className={css.footer}>
-        <div className={css.footerContainer}>
-          <div className={css.footerLeft}>
-            <img src={logo2} alt="logo" className={css.footerLogo} />
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Trockenbau
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Malerarbeiten
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Abrissarbeiten
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Maurer / Putzarbeiten
-            </p>
-          </div>
-
-          <div className={css.footerRight}>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Fliesenverlegung
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Altbausanierung
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Fußboden-Sanierung
-            </p>
-            <p className={css.footerLeftText}>
-              <GoDotFill className={css.iconDot} />
-              Bodenlegearbeiten
-            </p>
-          </div>
-          <a href="tel:01631288635" className={css.footerButton}>
-            <FaPhoneVolume className={css.iconButton} /> <br />
-            <p className={css.footerButtonText}>Jetzt kontaktieren</p>
-          </a>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 }
