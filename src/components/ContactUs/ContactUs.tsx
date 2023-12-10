@@ -67,14 +67,9 @@ export default function Contacts(): JSX.Element {
               <li className={scss.item}>
                 <SlHome className={scss.icon} />
                 <span className={scss.spanText}>Adresse: </span>
-                <a
-                  className={scss.link}
-                  href="#map"
-                  rel="noreferrer"
-                  aria-label="address"
-                >
+                <span className={scss.link}>
                   14480 Potsdam, Hans-Grade-Ring 36
-                </a>
+                </span>
               </li>
               <li className={scss.item}>
                 <SlEnvolope className={scss.icon} />
@@ -89,7 +84,10 @@ export default function Contacts(): JSX.Element {
               <li className={scss.item}>
                 <SlPhone className={scss.icon} />
                 <span className={scss.spanText}> Phone: </span>
-                <a href="tel:01775729872" className={scss.link}>
+                <a
+                  href="tel:01775729872"
+                  className={`${scss.link} ${scss.phones}`}
+                >
                   01775729872
                 </a>
                 <a href="tel:01631288635" className={scss.link}>

@@ -4,7 +4,7 @@ import AdminPage from "./components/Admin/AdminPage";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import ButtonScrollUp from "./components/ButtonScrollUp/ButtonScrollUp";
-import { calculateButtonScale } from './services/scaleService.ts';
+import { calculateButtonScale } from "./services/scaleService.ts";
 
 const App: FC = () => {
   const location = useLocation();
@@ -16,7 +16,6 @@ const App: FC = () => {
     }
   }, [location.hash]);
 
-
   document.documentElement.style.setProperty(
     "--button-scale",
     calculateButtonScale() + ""
@@ -27,7 +26,7 @@ const App: FC = () => {
       <Routes>
         <Route index element={<Hero />} />
         <Route
-          path={`${import.meta.env.VITE_REACT_APP_ROUTE}`}
+          path={`/${import.meta.env.VITE_REACT_APP_ROUTE}`}
           element={<AdminPage />}
         />
       </Routes>

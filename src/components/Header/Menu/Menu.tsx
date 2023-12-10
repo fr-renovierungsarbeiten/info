@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 import scss from "./Menu.module.scss";
 import { Link } from "react-router-dom";
@@ -7,13 +7,6 @@ interface IModal {
 }
 
 const Menu: FC<IModal> = ({ onClose }) => {
-  const [anchor, setAnchor] = useState("");
-
-  console.log("🚀  anchor:", anchor);
-  useEffect(() => {
-    const hash = window.location.hash;
-    setAnchor(hash.substring(1, hash.length));
-  }, []);
   return (
     <>
       <div className={scss.menu_container}>

@@ -18,17 +18,23 @@
 
 .logo {
   height: 5vh;
-  margin-left: 3vw;
+  // margin-left: 3vw;
   transition: height 0.2s ease;
   transition: filter 0.3s ease;
+  @media screen and (min-width: 1200px) {
+    margin-right: 0vw;
+  }
 }
 
 .navigate {
   display: none;
-  margin-right: 40px;
+  // margin-right: 4vw;
   @media screen and (min-width: 700px) {
     display: flex;
     gap: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 0vw;
   }
 }
 
@@ -41,14 +47,14 @@
   height: 40px;
   background-color: var(--blue);
   border-radius: 100%;
-  margin-right: 30px;
+  // margin-right: 30px;
   transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
   &:hover,
   &:focus,
   &:active {
     transform: scale(1.2);
   }
-  @media screen and (min-width: 699px) {
+  @media screen and (min-width: 700px) {
     display: none;
   }
 }

@@ -50,14 +50,16 @@ export function calculateRecapchaScale2() {
     case window.innerWidth > 1600:
       return 1.1;
 
-    case window.innerWidth >= 1400 && window.innerWidth < 1600:
-      return 1.1;
-
-    case window.innerWidth >= 1200 && window.innerWidth < 1400:
+    case window.innerWidth >= 1200 && window.innerWidth < 1600:
       return 1;
 
-    case window.innerWidth >= 320 && window.innerWidth < 1200:
+    case window.innerWidth >= 1000 && window.innerWidth < 1200:
       return 0.8;
+
+    case window.innerWidth >= 500 && window.innerWidth < 1000:
+      return 0.7;
+    case window.innerWidth >= 320 && window.innerWidth < 500:
+      return 0.6;
 
     default:
       return parseFloat("" + (window.innerWidth) / 3000);
