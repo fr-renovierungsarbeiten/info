@@ -47,6 +47,9 @@
   @media screen and (min-width: 1000px) {
     font-size: 1.5rem;
   }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4vw;
+  }
 }
 
 .review_body {
@@ -60,6 +63,9 @@
   @media screen and (min-width: 1000px) {
     font-size: 1.3rem;
   }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4vw;
+  }
 }
 
 .reviewButton {
@@ -71,6 +77,10 @@
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
   font-size: 1rem;
   box-shadow: 1px 1px 4px rgba(223, 127, 127, 0.3);
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4vw;
+    padding: 0.6vw 1.4vw;
+  }
 }
 
 .reviewButton:hover {
