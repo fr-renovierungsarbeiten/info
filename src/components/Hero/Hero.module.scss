@@ -50,8 +50,20 @@
 .mailBlock {
   position: absolute;
   right: 4vw;
-  top: 65%;
+  top: 61%;
   z-index: 3;
+  @media screen and (min-width: 350px) {
+    top: 62%;
+  }
+  @media screen and (min-width: 400px) {
+    top: 63%;
+  }
+  @media screen and (min-width: 450px) {
+    top: 64%;
+  }
+  @media screen and (min-width: 500px) {
+    top: 65%;
+  }
 }
 .darkLine {
   position: absolute;

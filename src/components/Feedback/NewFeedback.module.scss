@@ -7,6 +7,18 @@
   background-color: var(--white);
   border-radius: var(--b-radius);
   z-index: 20;
+  @media screen and (min-width: 500px) {
+    width: calc(80vw - 20px);
+    height: calc(95vh - 20px);
+  }
+  @media screen and (min-width: 700px) {
+    width: calc(95vw - 20px);
+    height: calc(50vh - 20px);
+  }
+  @media screen and (min-width: 1000px) {
+    width: calc(85vw - 20px);
+    height: calc(60vh - 20px);
+  }
 }
 .btn_close {
   position: absolute;
@@ -82,9 +94,5 @@
   }
   .btn_close {
     font-size: 1.3rem;
-  }
-  .reviewsContainer {
-    width: calc(40vw - 20px);
-    height: calc(50vh - 20px);
   }
 }

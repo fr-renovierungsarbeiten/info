@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { TextField } from "@mui/material";
-import css from "./NewFeedback.module.css";
+import scss from "./NewFeedback.module.scss";
 import { IoMdClose } from "react-icons/io";
 
 import Rating from "@mui/material/Rating";
@@ -60,17 +60,17 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
   };
 
   return (
-    <div className={css.reviewsContainer}>
+    <div className={scss.reviewsContainer}>
       <button
         type="button"
-        className={css.btn_close}
+        className={scss.btn_close}
         onClick={() => setModalHide(false)}
       >
         <IoMdClose />
       </button>
-      <form onSubmit={addReview} name="add_review" className={css.reviewForm}>
+      <form onSubmit={addReview} name="add_review" className={scss.reviewForm}>
         <TextField
-          className={css.inputName}
+          className={scss.inputName}
           required
           id="reviewName"
           value={inputName}
@@ -80,8 +80,8 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
           onChange={(e) => setInputName(e.target.value)}
         />
 
-        <p className={css.rating_title}>Bewerten Sie unsere Zusammenarbeit</p>
-        <div className={css.inputRating}>
+        <p className={scss.rating_title}>Bewerten Sie unsere Zusammenarbeit</p>
+        <div className={scss.inputRating}>
           <Rating
             name="hover-feedback"
             value={inputRating}
@@ -98,14 +98,12 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
             }
           />
           {inputRating !== null && (
-            <Box>
-              {labels[hover !== -1 ? hover : inputRating]}
-            </Box>
+            <Box>{labels[hover !== -1 ? hover : inputRating]}</Box>
           )}
         </div>
 
         <textarea
-          className={css.inputReview}
+          className={scss.inputReview}
           required
           placeholder="Hinterlassen Sie Ihre Bewertung"
           maxLength={300}
@@ -113,7 +111,7 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
           onChange={(e) => setInputReview(e.target.value)}
           value={inputReview}
         />
-        <button className={css.reviewButton} type="submit">
+        <button className={scss.reviewButton} type="submit">
           Bewertung abschicken
         </button>
       </form>

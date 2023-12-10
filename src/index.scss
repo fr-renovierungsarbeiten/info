@@ -148,3 +148,22 @@ div.swiper-button-next {
 #Contacts {
   scroll-margin-top: 13vh;
 }
+
+@media screen and (min-width: 480px) {
+  .container_contact {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container_contact {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container_contact {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}

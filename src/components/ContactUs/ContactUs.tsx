@@ -7,6 +7,7 @@ import sendMessageToTelegram from "../../services/Notice/sendMessageToTelegram";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import { SlEnvolope, SlHome, SlPhone } from "react-icons/sl";
+import { calculateRecapchaScale2 } from "../../services/scaleService";
 
 export default function Contacts(): JSX.Element {
   const [
@@ -55,7 +56,7 @@ export default function Contacts(): JSX.Element {
   return (
     <>
       <div className={scss.contactsMain} id="Contacts">
-        <div className={`${scss.contactsContainer} + container`}>
+        <div className={`${scss.contactsContainer} +   container_contact`}>
           <div className={scss.leftBlock}>
             <h2 className={scss.title}>KONTAKT</h2>
 
@@ -68,8 +69,7 @@ export default function Contacts(): JSX.Element {
                 <span className={scss.spanText}>Adresse: </span>
                 <a
                   className={scss.link}
-                  href={`http://maps.google.com/?q=:14480 Potsdam, Hans-Grade-Ring 36`}
-                  target="_blank"
+                  href="#map"
                   rel="noreferrer"
                   aria-label="address"
                 >
@@ -180,7 +180,7 @@ export default function Contacts(): JSX.Element {
                 <div className={scss.recapcha}>
                   <ReCAPTCHA
                     style={{
-                      transform: `scale(0.8)`,
+                      transform: `scale(${calculateRecapchaScale2()})`,
                     }}
                     sitekey={`${import.meta.env.VITE_REACT_APP_RECAPCHA}`}
                     onChange={handleRecaptchaChange}
@@ -203,6 +203,7 @@ export default function Contacts(): JSX.Element {
         </div>
 
         <iframe
+          id="map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9742.133216615364!2d13.116959698364251!3d52.37888189724196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85f15177ae319%3A0xc00070f77ab1cd24!2sHans-Grade-Ring%2036%2C%2014480%20Potsdam!5e0!3m2!1sru!2sde"
           className={scss.map}
           loading="lazy"

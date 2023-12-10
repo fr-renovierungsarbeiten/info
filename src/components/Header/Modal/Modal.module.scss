@@ -25,16 +25,11 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  min-width: 290px;
+  min-width: 200px;
   border-radius: 25px;
   padding: 24px 19px;
-  height: 90%;
-
+  height: 48%;
   background-color: var(--blue);
-
-  @media screen and (min-width: 360px) {
-    min-width: 328px;
-  }
 }
 .close_btn_container {
   display: flex;

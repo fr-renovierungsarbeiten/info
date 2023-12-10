@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import css from "./Modal.module.css";
+import scss from "./Modal.module.scss";
 import { MouseEvent, useEffect } from "react";
 import NewFeedback from "../Feedback/NewFeedback";
 const modalRoot = document.getElementById("modal-root");
@@ -31,7 +31,7 @@ const Modal = ({ setModalHide }: IModal): JSX.Element => {
   };
 
   return createPortal(
-    <div className={css.overlay} onClick={addOverlay}>
+    <div className={scss.overlay} onClick={addOverlay}>
       <NewFeedback setModalHide={setModalHide} />
     </div>,
     modalRoot as HTMLElement

@@ -45,3 +45,21 @@ export function calculateRecapchaScale() {
       return parseFloat("" + (window.innerWidth) / 3000);
   }
 }
+export function calculateRecapchaScale2() {
+  switch (true) {
+    case window.innerWidth > 1600:
+      return 1.1;
+
+    case window.innerWidth >= 1400 && window.innerWidth < 1600:
+      return 1.1;
+
+    case window.innerWidth >= 1200 && window.innerWidth < 1400:
+      return 1;
+
+    case window.innerWidth >= 320 && window.innerWidth < 1200:
+      return 0.8;
+
+    default:
+      return parseFloat("" + (window.innerWidth) / 3000);
+  }
+}
