@@ -61,6 +61,7 @@ const Feedback: FC = () => {
           </h2>
           {reviews?.length > 0 && (
             <Swiper
+              grabCursor={true}
               spaceBetween={30}
               effect={"slide"}
               loop={true}
