@@ -26,7 +26,7 @@ const App: FC = () => {
       <Routes>
         <Route index element={<Hero />} />
         <Route
-          path={`/${import.meta.env.VITE_REACT_APP_ROUTE}`}
+          path={`${import.meta.env.VITE_REACT_APP_ROUTE}`}
           element={<AdminPage />}
         />
       </Routes>

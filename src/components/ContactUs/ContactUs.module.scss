@@ -12,6 +12,7 @@
   width: 100%;
   /* height: 100vh; */
   margin: 0;
+  align-items: center;
 
   background-image: linear-gradient(
     0deg,
@@ -45,9 +46,9 @@
     margin: 1vw 2vw;
     gap: 40px;
   }
-  @media screen and (min-width: 1300px) {
-    gap: 100px;
-  }
+  // @media screen and (min-width: 1300px) {
+  //   justify-content: space-evenly;
+  // }
 }
 
 .leftBlock {
@@ -164,10 +165,11 @@
   }
 
   @media screen and (min-width: 1000px) {
-    width: clamp(100px, 80%, 420px);
+    width: clamp(100px, 80%, 380px);
   }
+
   @media screen and (min-width: 1200px) {
-    width: clamp(100px, 80%, 480px);
+    width: clamp(100px, 80%, 500px);
   }
 }
 .form_title {
