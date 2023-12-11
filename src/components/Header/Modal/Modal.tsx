@@ -41,7 +41,6 @@ const ModalMenu: FC<IModal> = ({ onClose }) => {
             }}
           >
             <IoCloseOutline />
-            close
           </button>
         </div>
 
