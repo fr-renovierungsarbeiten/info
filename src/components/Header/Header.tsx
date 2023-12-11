@@ -74,7 +74,7 @@ export default function Header(): JSX.Element {
           </li>
         </ul>
         <button type="button" className={scss.burger_btn} onClick={onOpen}>
-          <VscMenu color={{ color: "black" }} size={24} />
+          <VscMenu color={{ color: "black" }} size={25} />
         </button>
       </nav>
 
