@@ -68,7 +68,7 @@ const Footer = (): JSX.Element => {
         </div>
         <div className={scss.footer_button_container}>
           <button type="button" className={scss.footer_button}>
-            <a href="tel:01775729872" className={scss.phone_call}>
+            <a href="tel:01631288635" className={scss.phone_call}>
               <FaPhoneVolume className={scss.icon_button} /> <br />
               <p className={scss.footer_button_text}>Jetzt kontaktieren</p>
             </a>

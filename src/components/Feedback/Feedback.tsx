@@ -61,16 +61,17 @@ const Feedback: FC = () => {
           </h2>
           {reviews?.length > 0 && (
             <Swiper
-              grabCursor={true}
-              spaceBetween={30}
-              effect={"slide"}
-              loop={true}
-              navigation={true}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: false,
-              }}
+            spaceBetween={30}
+            effect={"slide"}
+            navigation={true}
+            grabCursor={true}
+            zoom={true}
+            loop={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
               modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
               style={{
                 width: "90%",
@@ -80,7 +81,7 @@ const Feedback: FC = () => {
               {reviews.map((el) => (
                 <SwiperSlide
                   key={el.id}
-                  style={{ opacity: 1, pointerEvents: "none" }}
+                  style={{ opacity: 1 }}
                 >
                   <div className={scss.reviewsContainer}>
                     <p className={scss.review_name}>

@@ -67,7 +67,7 @@ export default function Contacts(): JSX.Element {
               <li className={scss.item}>
                 <SlHome className={scss.icon} />
                 <span className={scss.spanText}>Adresse: </span>
-                <span className={scss.link}>
+                <span className={scss.linkText}>
                   14480 Potsdam, Hans-Grade-Ring 36
                 </span>
               </li>
@@ -88,10 +88,10 @@ export default function Contacts(): JSX.Element {
                   href="tel:01775729872"
                   className={`${scss.link} ${scss.phones}`}
                 >
-                  01775729872
+                  01631288635
                 </a>
                 <a href="tel:01631288635" className={scss.link}>
-                  01631288635
+                  01775729872
                 </a>
               </li>
             </ul>

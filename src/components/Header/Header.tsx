@@ -10,18 +10,27 @@ export default function Header(): JSX.Element {
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
   const [scrollPosition, setScrollPosition] = useState<number>(0);
-  const windowHeight = window.innerHeight - 80;
   const [filterBrightness, setFilterBrightness] = useState(0);
   const [filterInvert, setFilterInvert] = useState(1);
 
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  const heroHeight = window.innerWidth / 1.95 - 50;
+  const headerHeight = heroHeight / 3 - scrollPosition / 5;
+  const max = heroHeight / 3;
+  let min = windowHeight / 20;
+  if (windowWidth < 500) {
+    min = windowHeight / 15;
+  }
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < windowHeight) {
+      if (window.scrollY < heroHeight) {
         setScrollPosition(window.scrollY);
         setFilterBrightness(0);
         setFilterInvert(1);
       } else {
-        setScrollPosition(windowHeight);
+        setScrollPosition(heroHeight);
         setFilterBrightness(1);
         setFilterInvert(0);
       }
@@ -32,19 +41,17 @@ export default function Header(): JSX.Element {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [windowHeight]);
-
-  const headerHeight = Math.max(15 - scrollPosition / 100, 8);
+  }, [heroHeight]);
 
   return (
     <header
       className={`${scss.headerContainer} + container`}
-      style={{ height: `${headerHeight}vh` }}
+      style={{ height: `clamp(${min}px, ${headerHeight}px, ${max}px)` }}
     >
       <img
         className={scss.logo}
         style={{
-          height: `${headerHeight - 1}vh`,
+          height: `clamp(${min}px, ${headerHeight - 10}px, ${max}px)`,
           filter: `brightness(${filterBrightness}) invert(${filterInvert})`,
         }}
         src={logo}
